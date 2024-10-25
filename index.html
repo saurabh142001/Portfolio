@@ -1,1 +1,134 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Saurabh showcasing skills, projects, and social media links">
+    <meta name="keywords" content="Saurabh, portfolio, software developer, contact">
+    <meta name="author" content="Saurabh">
+    <title>Saurabh - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        /* Tailwind automatically applies dark mode styles with the "dark" class */
+        body.light {
+            background-color: #f7ecd7;
+            color: #011012;
+        }
+
+        body.dark {
+            background-color: #021c1a;
+            color: #f7ecd7;
+        }
+
+        /* Custom styles for specific sections in dark mode */
+        .dark .bg-custom {
+            background-color: #083d3a; /* Background color for dark mode */
+        }
+
+        .dark .text-custom {
+            color: #f7ecd7; /* Text color for dark mode */
+        }
+    </style>
+</head>
+<body class="light">
+    <!-- Dark Mode Toggle -->
+    <header class="bg-gray-800 text-white p-4">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">Saurabh's Portfolio</div>
+            <div class="flex items-center space-x-4">
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-gray-300" title="Learn more about me">About</a></li>
+                    <li><a href="#projects" class="hover:text-gray-300" title="View my projects">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300" title="Contact me">Contact</a></li>
+                </ul>
+                <!-- Dark Mode Toggle Button -->
+                <button id="darkModeToggle" class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md">
+                    Toggle Dark Mode
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4">
+        <!-- Profile Section -->
+        <section id="about" class="text-center my-8" aria-labelledby="about-heading">
+            <h1 id="about-heading" class="text-3xl font-bold">Saurabh</h1>
+            <img src="profile-picture.jpg" alt="Saurabh's Profile Picture" class="mx-auto rounded-full w-40 h-40 my-4 border-4 border-gray-200">
+            <p class="text-lg leading-7 max-w-2xl mx-auto">Hi! I'm Saurabh, a software developer specializing in blockchain technologies and decentralized applications. I am passionate about using technology to drive positive change in society.</p>
+        </section>
+
+        <!-- Links to Projects (Grid Usage) -->
+        <section id="projects" aria-labelledby="projects-heading" class="my-12">
+            <h2 id="projects-heading" class="text-2xl font-semibold text-center mb-6">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="https://github.com/saurabh142001" target="_blank" rel="noopener noreferrer" class="bg-white p-4 shadow hover:shadow-lg rounded transition dark:bg-custom" title="Visit my GitHub Profile">
+                    <h3 class="text-xl font-semibold text-custom">GitHub</h3>
+                    <p class="text-custom">Explore my open-source contributions.</p>
+                </a>
+                <a href="https://www.linkedin.com/in/saurabh-kumar-5b8b4920a/" target="_blank" rel="noopener noreferrer" class="bg-white p-4 shadow hover:shadow-lg rounded transition dark:bg-custom" title="Visit my LinkedIn Profile">
+                    <h3 class="text-xl font-semibold text-custom">LinkedIn</h3>
+                    <p class="text-custom">Connect with me professionally.</p>
+                </a>
+                <a href="resume.pdf" target="_blank" class="bg-white p-4 shadow hover:shadow-lg rounded transition dark:bg-custom" title="View my Resume">
+                    <h3 class="text-xl font-semibold text-custom">Resume</h3>
+                    <p class="text-custom">View my professional experience.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Social Media Icons (Flexbox Usage) -->
+        <section aria-labelledby="social-media-heading" class="my-12">
+            <h2 id="social-media-heading" class="text-2xl font-semibold text-center mb-6">Follow Me</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-500" aria-label="Follow me on Twitter">
+                    <img src="twitter-icon.png" alt="Twitter" class="w-8 h-8">
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-700" aria-label="Follow me on Facebook">
+                    <img src="facebook-icon.png" alt="Facebook" class="w-8 h-8">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-pink-600" aria-label="Follow me on Instagram">
+                    <img src="instagram-icon.png" alt="Instagram" class="w-8 h-8">
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" aria-labelledby="contact-heading" class="my-12 bg-white p-8 rounded-lg shadow-md dark:bg-custom">
+            <h2 id="contact-heading" class="text-2xl font-semibold text-center mb-6">Contact Me</h2>
+            <form action="submit_form.php" method="POST" class="max-w-lg mx-auto space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                    <input type="text" id="name" name="name" class="block w-full mt-1 p-2 border border-gray-300 rounded-md" required aria-required="true">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                    <input type="email" id="email" name="email" class="block w-full mt-1 p-2 border border-gray-300 rounded-md" required aria-required="true">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
+                    <textarea id="message" name="message" rows="4" class="block w-full mt-1 p-2 border border-gray-300 rounded-md" required aria-required="true"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2024 Saurabh</p>
+    </footer>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const bodyElement = document.body;
+
+        toggleButton.addEventListener('click', function() {
+            bodyElement.classList.toggle('dark');
+            bodyElement.classList.toggle('light');
+        });
+    </script>
+</body>
+</html>
